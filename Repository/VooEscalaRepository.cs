@@ -16,6 +16,7 @@ public class VooEscalaRepository : IVooEscalaRepository
         return await _context.VooEscalas
             .Include(ve => ve.Voo)
             .Include(ve => ve.Escala)
+                .ThenInclude(e => e.AeroportoEscala)   
             .AsNoTracking()
             .ToListAsync();
     }
@@ -25,6 +26,7 @@ public class VooEscalaRepository : IVooEscalaRepository
         return await _context.VooEscalas
             .Include(ve => ve.Voo)
             .Include(ve => ve.Escala)
+                .ThenInclude(e => e.AeroportoEscala)  
             .FirstOrDefaultAsync(ve => ve.IdVoo == idVoo && ve.IdEscala == idEscala);
     }
 

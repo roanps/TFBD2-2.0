@@ -150,3 +150,4 @@ C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\refint\VoeMais.dll
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\VoeMais.pdb
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\VoeMais.genruntimeconfig.cache
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\ref\VoeMais.dll
+C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\VoeMais.sourcelink.json

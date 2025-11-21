@@ -1,3 +1,50 @@
 @model IEnumerable<VoeMais.Models.VooEscala>
-<h2>VooEscala - Lista</h2>
-<!-- ajuste manual para chaves compostas -->
+
+@{
+    ViewData["Title"] = "Voo x Escalas";
+}
+
+<h2>Voo x Escalas</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Adicionar escala a voo</a>
+</p>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Voo</th>
+            <th>Escala</th>
+            <th>Aeroporto da escala</th>
+            <th>Chegada</th>
+            <th>Saída</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdVoo</td>
+                <td>@item.IdEscala</td>
+                <td>@item.Escala?.AeroportoEscala?.Nome</td>
+                <td>@item.Escala?.ChegadaEscala.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@item.Escala?.SaidaEscala.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    <a asp-action="Details"
+                       asp-route-idVoo="@item.IdVoo"
+                       asp-route-idEscala="@item.IdEscala"
+                       class="btn btn-sm btn-info">Detalhes</a>
+                    <a asp-action="Edit"
+                       asp-route-idVoo="@item.IdVoo"
+                       asp-route-idEscala="@item.IdEscala"
+                       class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Delete"
+                       asp-route-idVoo="@item.IdVoo"
+                       asp-route-idEscala="@item.IdEscala"
+                       class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

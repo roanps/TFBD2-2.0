@@ -1,3 +1,50 @@
 @model IEnumerable<VoeMais.Models.Passagem>
-<h2>Passagem - Lista</h2>
-<!-- ajuste manual para chaves compostas -->
+
+@{
+    ViewData["Title"] = "Passagens";
+}
+
+<h2>Passagens</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nova passagem</a>
+</p>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Passageiro</th>
+            <th>Voo</th>
+            <th>Nº Poltrona</th>
+            <th>Check-in</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Passageiro?.Nome (@item.IdPassageiro)</td>
+                <td>@item.IdVoo</td>
+                <td>@item.NumeroPoltrona</td>
+                <td>@(item.CheckinRealizado ? "Realizado" : "Pendente")</td>
+                <td>
+                    <a asp-action="Details"
+                       asp-route-idPassageiro="@item.IdPassageiro"
+                       asp-route-idVoo="@item.IdVoo"
+                       class="btn btn-sm btn-info">Detalhes</a>
+
+                    <a asp-action="Edit"
+                       asp-route-idPassageiro="@item.IdPassageiro"
+                       asp-route-idVoo="@item.IdVoo"
+                       class="btn btn-sm btn-warning">Editar</a>
+
+                    <a asp-action="Delete"
+                       asp-route-idPassageiro="@item.IdPassageiro"
+                       asp-route-idVoo="@item.IdVoo"
+                       class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

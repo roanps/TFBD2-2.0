@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\views\\vooescala\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|solutionrelative:views\\vooescala\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\views\\poltrona\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|solutionrelative:views\\poltrona\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\repository\\vooescalarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|solutionrelative:repository\\vooescalarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\controllers\\vooescalacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|solutionrelative:controllers\\vooescalacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\views\\passagem\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|solutionrelative:views\\passagem\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\controllers\\aeroportocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|solutionrelative:controllers\\aeroportocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|solutionrelative:data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\controllers\\vooescalacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|solutionrelative:controllers\\vooescalacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\controllers\\voocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\repository\\voorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|solutionrelative:repository\\voorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\repository\\vooescalarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|solutionrelative:repository\\vooescalarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{620C84C2-2932-FDF2-4D92-37ABC2463332}|VoeMais.csproj|c:\\users\\roan\\downloads\\voemais_corrigido\\repository\\poltronarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -158,7 +170,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -174,7 +186,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Views\\VooEscala\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\VooEscala\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Views\\VooEscala\\Index.cshtml",
+              "RelativeToolTip": "Views\\VooEscala\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwC4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T19:34:04.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Views\\Poltrona\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Poltrona\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Views\\Poltrona\\Index.cshtml",
+              "RelativeToolTip": "Views\\Poltrona\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T19:32:39.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "EscalaController.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Controllers\\EscalaController.cs",
               "RelativeDocumentMoniker": "Controllers\\EscalaController.cs",
@@ -182,12 +220,11 @@
               "RelativeToolTip": "Controllers\\EscalaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:04:34.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:04:34.143Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "DbInitializer.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Data\\DbInitializer.cs",
               "RelativeDocumentMoniker": "Data\\DbInitializer.cs",
@@ -195,12 +232,11 @@
               "RelativeToolTip": "Data\\DbInitializer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:47:21.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T16:47:21.324Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "VoeMaisDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Data\\VoeMaisDbContext.cs",
               "RelativeDocumentMoniker": "Data\\VoeMaisDbContext.cs",
@@ -208,12 +244,11 @@
               "RelativeToolTip": "Data\\VoeMaisDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAOYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:56:15.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T16:56:15.021Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Views\\Aeroporto\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Aeroporto\\Create.cshtml",
@@ -221,12 +256,11 @@
               "RelativeToolTip": "Views\\Aeroporto\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-21T17:03:50.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T17:03:50.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -234,25 +268,24 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T16:48:44.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T16:48:44.219Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "VooEscalaController.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Controllers\\VooEscalaController.cs",
               "RelativeDocumentMoniker": "Controllers\\VooEscalaController.cs",
               "ToolTip": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Controllers\\VooEscalaController.cs",
               "RelativeToolTip": "Controllers\\VooEscalaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T19:04:57.203Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "AeronaveController.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Controllers\\AeronaveController.cs",
               "RelativeDocumentMoniker": "Controllers\\AeronaveController.cs",
@@ -260,12 +293,37 @@
               "RelativeToolTip": "Controllers\\AeronaveController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:04:13.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:04:13.987Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "VooEscalaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\VooEscalaRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\VooEscalaRepository.cs",
+              "ToolTip": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\VooEscalaRepository.cs",
+              "RelativeToolTip": "Repository\\VooEscalaRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T17:04:51.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Views\\Passagem\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Passagem\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Views\\Passagem\\Index.cshtml",
+              "RelativeToolTip": "Views\\Passagem\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T19:33:35.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "EmpresaAereaController.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Controllers\\EmpresaAereaController.cs",
               "RelativeDocumentMoniker": "Controllers\\EmpresaAereaController.cs",
@@ -273,25 +331,24 @@
               "RelativeToolTip": "Controllers\\EmpresaAereaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:04:30.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:04:30.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "AeroportoController.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Controllers\\AeroportoController.cs",
               "RelativeDocumentMoniker": "Controllers\\AeroportoController.cs",
               "ToolTip": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Controllers\\AeroportoController.cs",
               "RelativeToolTip": "Controllers\\AeroportoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T19:03:49.702Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "PassageiroController.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Controllers\\PassageiroController.cs",
               "RelativeDocumentMoniker": "Controllers\\PassageiroController.cs",
@@ -299,12 +356,11 @@
               "RelativeToolTip": "Controllers\\PassageiroController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:04:43.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:04:43.081Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "PassagemController.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Controllers\\PassagemController.cs",
               "RelativeDocumentMoniker": "Controllers\\PassagemController.cs",
@@ -312,12 +368,11 @@
               "RelativeToolTip": "Controllers\\PassagemController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:04:47.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:04:47.182Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "PoltronaController.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Controllers\\PoltronaController.cs",
               "RelativeDocumentMoniker": "Controllers\\PoltronaController.cs",
@@ -325,12 +380,11 @@
               "RelativeToolTip": "Controllers\\PoltronaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:04:50.129Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:04:50.129Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "VooController.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Controllers\\VooController.cs",
               "RelativeDocumentMoniker": "Controllers\\VooController.cs",
@@ -338,12 +392,11 @@
               "RelativeToolTip": "Controllers\\VooController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:04:53.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:04:53.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "PassagemRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\PassagemRepository.cs",
               "RelativeDocumentMoniker": "Repository\\PassagemRepository.cs",
@@ -351,12 +404,11 @@
               "RelativeToolTip": "Repository\\PassagemRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:01:51.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:01:51.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "PassageiroRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\PassageiroRepository.cs",
               "RelativeDocumentMoniker": "Repository\\PassageiroRepository.cs",
@@ -364,25 +416,11 @@
               "RelativeToolTip": "Repository\\PassageiroRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:01:46.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:01:46.464Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "VooEscalaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\VooEscalaRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\VooEscalaRepository.cs",
-              "ToolTip": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\VooEscalaRepository.cs",
-              "RelativeToolTip": "Repository\\VooEscalaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:04:51.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "VooRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\VooRepository.cs",
               "RelativeDocumentMoniker": "Repository\\VooRepository.cs",
@@ -390,12 +428,11 @@
               "RelativeToolTip": "Repository\\VooRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:04:54.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T17:04:54.436Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "EscalaRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\EscalaRepository.cs",
               "RelativeDocumentMoniker": "Repository\\EscalaRepository.cs",
@@ -403,12 +440,11 @@
               "RelativeToolTip": "Repository\\EscalaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:33:50.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T17:33:50.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "EmpresaAereaRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\EmpresaAereaRepository.cs",
               "RelativeDocumentMoniker": "Repository\\EmpresaAereaRepository.cs",
@@ -416,12 +452,11 @@
               "RelativeToolTip": "Repository\\EmpresaAereaRepository.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAmwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:00:25.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:00:25.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "AeroportoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\AeroportoRepository.cs",
               "RelativeDocumentMoniker": "Repository\\AeroportoRepository.cs",
@@ -429,12 +464,11 @@
               "RelativeToolTip": "Repository\\AeroportoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:00:34.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:00:34.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "AeronaveRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\AeronaveRepository.cs",
               "RelativeDocumentMoniker": "Repository\\AeronaveRepository.cs",
@@ -442,12 +476,11 @@
               "RelativeToolTip": "Repository\\AeronaveRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T18:59:28.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T18:59:28.51Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "PoltronaRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\PoltronaRepository.cs",
               "RelativeDocumentMoniker": "Repository\\PoltronaRepository.cs",
@@ -455,12 +488,11 @@
               "RelativeToolTip": "Repository\\PoltronaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:01:56.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:01:56.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "IVooRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\IVooRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IVooRepository.cs",
@@ -468,12 +500,11 @@
               "RelativeToolTip": "Repository\\IVooRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:01:39.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:01:39.356Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "IVooEscalaRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\IVooEscalaRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IVooEscalaRepository.cs",
@@ -481,12 +512,11 @@
               "RelativeToolTip": "Repository\\IVooEscalaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:01:34.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:01:34.873Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "IPoltronaRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\IPoltronaRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IPoltronaRepository.cs",
@@ -494,12 +524,11 @@
               "RelativeToolTip": "Repository\\IPoltronaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:01:30.785Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:01:30.785Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "IPassagemRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\IPassagemRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IPassagemRepository.cs",
@@ -507,12 +536,11 @@
               "RelativeToolTip": "Repository\\IPassagemRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:01:24.666Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:01:24.666Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "IPassageiroRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\IPassageiroRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IPassageiroRepository.cs",
@@ -520,12 +548,11 @@
               "RelativeToolTip": "Repository\\IPassageiroRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:01:20.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:01:20.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "IEscalaRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\IEscalaRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IEscalaRepository.cs",
@@ -533,12 +560,11 @@
               "RelativeToolTip": "Repository\\IEscalaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:01:13.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:01:13.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "IEmpresaAereaRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\IEmpresaAereaRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IEmpresaAereaRepository.cs",
@@ -546,12 +572,11 @@
               "RelativeToolTip": "Repository\\IEmpresaAereaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:01:09.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:01:09.195Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "IAeroportoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\IAeroportoRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IAeroportoRepository.cs",
@@ -559,12 +584,11 @@
               "RelativeToolTip": "Repository\\IAeroportoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T19:01:03.115Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T19:01:03.115Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "IAeronaveRepository.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Repository\\IAeronaveRepository.cs",
               "RelativeDocumentMoniker": "Repository\\IAeronaveRepository.cs",
@@ -572,12 +596,11 @@
               "RelativeToolTip": "Repository\\IAeronaveRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T18:59:58.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T18:59:58.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Views\\Aeroporto\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Aeroporto\\Delete.cshtml",
@@ -589,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Views\\Aeroporto\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Aeroporto\\Index.cshtml",
@@ -601,7 +624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "Aeroporto.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Models\\Aeroporto.cs",
               "RelativeDocumentMoniker": "Models\\Aeroporto.cs",
@@ -613,7 +636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "Escala.cs",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Models\\Escala.cs",
               "RelativeDocumentMoniker": "Models\\Escala.cs",
@@ -625,7 +648,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Views\\Aeroporto\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Aeroporto\\Details.cshtml",
@@ -637,7 +660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\Views\\Aeroporto\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Aeroporto\\Edit.cshtml",
