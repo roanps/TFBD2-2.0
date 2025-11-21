@@ -1,72 +1,138 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using VoeMais.Data;
 using VoeMais.Models;
 using VoeMais.Repository;
+using Microsoft.EntityFrameworkCore;
 
-namespace VoeMais.Controllers;
-
-public class EscalaController : Controller
+namespace VoeMais.Controllers
 {
-    private readonly IEscalaRepository _repo;
-
-    public EscalaController(IEscalaRepository repo)
+    public class EscalaController : Controller
     {
-        _repo = repo;
-    }
+        private readonly IEscalaRepository _repo;
+        private readonly IAeroportoRepository _aeroRepo;
+        private readonly IVooRepository _vooRepo;
+        private readonly IVooEscalaRepository _vooEscalaRepo;
 
-    public async Task<IActionResult> Index()
-    {
-        var list = await _repo.GetAll();
-        return View(list);
-    }
+        public EscalaController(
+            IEscalaRepository repo,
+            IAeroportoRepository aeroRepo,
+            IVooRepository vooRepo,
+            IVooEscalaRepository vooEscalaRepo)
+        {
+            _repo = repo;
+            _aeroRepo = aeroRepo;
+            _vooRepo = vooRepo;
+            _vooEscalaRepo = vooEscalaRepo;
+        }
 
-    public IActionResult Create()
-    {
-        return View(new Escala());
-    }
+        // GET: Escala
+        public async Task<IActionResult> Index()
+        {
+            var escalas = await _repo.GetAll();
+            return View(escalas);
+        }
 
-    [HttpPost]
-    public async Task<IActionResult> Create(Escala model)
-    {
-        if (!ModelState.IsValid) return View(model);
-        await _repo.Create(model);
-        return RedirectToAction(nameof(Index));
-    }
+        // GET: Escala/Create
+        public async Task<IActionResult> Create()
+        {
+            ViewBag.Aeroportos = new SelectList(await _aeroRepo.GetAll(), "IdAeroporto", "Nome");
 
-    public async Task<IActionResult> Edit(int id)
-    {
-        var item = await _repo.GetById(id);
-        if (item == null) return NotFound();
-        return View(item);
-    }
+            // Lista de voos (exibe origem -> destino)
+            var voos = await _vooRepo.GetAll();
+            ViewBag.Voos = new SelectList(
+                voos.Select(v => new
+                {
+                    v.IdVoo,
+                    Descricao = $"{v.IdVoo} - {v.Origem?.CodigoIATA} ? {v.Destino?.CodigoIATA}"
+                }),
+                "IdVoo",
+                "Descricao"
+            );
 
-    [HttpPost]
-    public async Task<IActionResult> Edit(Escala model)
-    {
-        if (!ModelState.IsValid) return View(model);
-        await _repo.Update(model);
-        return RedirectToAction(nameof(Index));
-    }
+            return View(new Escala());
+        }
 
-    public async Task<IActionResult> Details(int id)
-    {
-        var item = await _repo.GetById(id);
-        if (item == null) return NotFound();
-        return View(item);
-    }
+        // POST: Escala/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Escala escala, int idVoo)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Aeroportos = new SelectList(await _aeroRepo.GetAll(), "IdAeroporto", "Nome");
 
-    public async Task<IActionResult> Delete(int id)
-    {
-        var item = await _repo.GetById(id);
-        if (item == null) return NotFound();
-        return View(item);
-    }
+                var voos = await _vooRepo.GetAll();
+                ViewBag.Voos = new SelectList(
+                    voos.Select(v => new
+                    {
+                        v.IdVoo,
+                        Descricao = $"{v.IdVoo} - {v.Origem?.CodigoIATA} ? {v.Destino?.CodigoIATA}"
+                    }),
+                    "IdVoo",
+                    "Descricao"
+                );
 
-    [HttpPost, ActionName("Delete")]
-    public async Task<IActionResult> DeleteConfirmed(int id)
-    {
-        var item = await _repo.GetById(id);
-        if (item == null) return NotFound();
-        await _repo.Delete(item);
-        return RedirectToAction(nameof(Index));
+                return View(escala);
+            }
+
+            // 1?? Criar escala
+            await _repo.Create(escala);
+
+            // 2?? Criar vínculo com o voo automaticamente
+            var vooEscala = new VooEscala
+            {
+                IdVoo = idVoo,
+                IdEscala = escala.IdEscala
+            };
+
+            await _vooEscalaRepo.Create(vooEscala);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: Escala/Edit/5
+        public async Task<IActionResult> Edit(int id)
+        {
+            var escala = await _repo.GetById(id);
+            if (escala == null)
+                return NotFound();
+
+            ViewBag.Aeroportos = new SelectList(await _aeroRepo.GetAll(), "IdAeroporto", "Nome", escala.IdAeroportoEscala);
+            return View(escala);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Escala escala)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Aeroportos = new SelectList(await _aeroRepo.GetAll(), "IdAeroporto", "Nome", escala.IdAeroportoEscala);
+                return View(escala);
+            }
+
+            await _repo.Update(escala);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: Escala/Delete/5
+        public async Task<IActionResult> Delete(int id)
+        {
+            var escala = await _repo.GetById(id);
+            if (escala == null)
+                return NotFound();
+
+            return View(escala);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            await _repo.Delete(id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

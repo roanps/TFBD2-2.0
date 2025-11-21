@@ -135,6 +135,7 @@ C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\VoeMais.csproj.CoreCo
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\VoeMais.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\VoeMais.RazorAssemblyInfo.cache
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\VoeMais.RazorAssemblyInfo.cs
+C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\VoeMais.sourcelink.json
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
@@ -150,4 +151,3 @@ C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\refint\VoeMais.dll
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\VoeMais.pdb
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\VoeMais.genruntimeconfig.cache
 C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\ref\VoeMais.dll
-C:\Users\Roan\Downloads\VoeMais_corrigido\obj\Debug\net9.0\VoeMais.sourcelink.json

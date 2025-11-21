@@ -1,34 +1,66 @@
 @model VoeMais.Models.Voo
+
 @{
     ViewData["Title"] = "Excluir Voo";
 }
-<h2>@ViewData["Title"]</h2>
 
-<p>Tem certeza que deseja excluir este registro?</p>
+<h2>Excluir Voo</h2>
+<hr />
 
-<dl class="row">
-    <dt class="col-sm-2">ID</dt>
-    <dd class="col-sm-10">@Model.IdVoo</dd>
+@if (ViewBag.Alerta != null)
+{
+    <div class="alert alert-warning">
+        <strong>@ViewBag.Alerta</strong>
+    </div>
+}
 
-    <dt class="col-sm-2">ID Aeronave</dt>
-    <dd class="col-sm-10">@Model.IdAeronave</dd>
+<div class="card p-3 mb-3">
+    <h4>Informações do Voo</h4>
 
-    <dt class="col-sm-2">Aeroporto Origem</dt>
-    <dd class="col-sm-10">@Model.IdAeroportoOrigem</dd>
+    <p><strong>ID do Voo:</strong> @Model.IdVoo</p>
+    <p><strong>Aeronave:</strong> @Model.Aeronave?.ModeloAeronave</p>
+    <p><strong>Origem:</strong> @Model.Origem?.CodigoIATA - @Model.Origem?.Nome</p>
+    <p><strong>Destino:</strong> @Model.Destino?.CodigoIATA - @Model.Destino?.Nome</p>
+    <p><strong>Partida:</strong> @Model.Partida</p>
+    <p><strong>Chegada:</strong> @Model.Chegada</p>
+</div>
 
-    <dt class="col-sm-2">Partida</dt>
-    <dd class="col-sm-10">@Model.Partida</dd>
+@if (Model.VoosEscalas.Any())
+{
+    <div class="card p-3 mb-3">
+        <h4>Escalas vinculadas</h4>
 
-    <dt class="col-sm-2">Aeroporto Destino</dt>
-    <dd class="col-sm-10">@Model.IdAeroportoDestino</dd>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Aeroporto</th>
+                    <th>Chegada</th>
+                    <th>Saída</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var escala in Model.VoosEscalas.Select(ve => ve.Escala))
+                {
+                    <tr>
+                        <td>@escala.AeroportoEscala?.CodigoIATA - @escala.AeroportoEscala?.Nome</td>
+                        <td>@escala.ChegadaEscala</td>
+                        <td>@escala.SaidaEscala</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
 
-    <dt class="col-sm-2">Chegada</dt>
-    <dd class="col-sm-10">@Model.Chegada</dd>
-
-
-</dl>
+<div class="alert alert-danger">
+    Tem certeza de que deseja excluir este voo?
+    <br />
+    <strong>Esta ação não pode ser desfeita.</strong>
+</div>
 
 <form asp-action="Delete" method="post">
-    <button type="submit" class="btn btn-danger">Excluir</button>
+    <input type="hidden" asp-for="IdVoo" />
+
+    <button type="submit" class="btn btn-danger">Excluir Voo</button>
     <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
 </form>

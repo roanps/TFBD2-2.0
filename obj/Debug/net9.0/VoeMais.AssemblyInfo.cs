@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VoeMais")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3ce7e1ecce7d1e1df0720a09bc0ca76e4ea38ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54c1bce4f95c872067d3e1b04a0eb6a6d6d513d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("VoeMais")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VoeMais")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

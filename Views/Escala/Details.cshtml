@@ -1,23 +1,53 @@
 @model VoeMais.Models.Escala
+
 @{
-    ViewData["Title"] = "Detalhes Escala";
+    ViewData["Title"] = "Detalhes da Escala";
 }
-<h2>@ViewData["Title"]</h2>
 
-<dl class="row">
-    <dt class="col-sm-2">ID</dt>
-    <dd class="col-sm-10">@Model.IdEscala</dd>
+<h2>Detalhes da Escala</h2>
+<hr />
 
-    <dt class="col-sm-2">Aeroporto Escala</dt>
-    <dd class="col-sm-10">@Model.IdAeroportoEscala</dd>
+<div class="card p-3 mb-4">
 
-    <dt class="col-sm-2">Chegada</dt>
-    <dd class="col-sm-10">@Model.ChegadaEscala</dd>
+    <p><strong>ID da Escala:</strong> @Model.IdEscala</p>
+    <p>
+        <strong>Aeroporto:</strong>
+        @Model.AeroportoEscala?.CodigoIATA - @Model.AeroportoEscala?.Nome
+    </p>
 
-    <dt class="col-sm-2">Saída</dt>
-    <dd class="col-sm-10">@Model.SaidaEscala</dd>
+    <p><strong>Chegada:</strong> @Model.ChegadaEscala</p>
+    <p><strong>Saída:</strong> @Model.SaidaEscala</p>
 
+    <h4>Voos vinculados</h4>
 
-</dl>
+    @if (Model.VoosEscalas != null && Model.VoosEscalas.Any())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID Voo</th>
+                    <th>Origem</th>
+                    <th>Destino</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ve in Model.VoosEscalas)
+                {
+                    <tr>
+                        <td>@ve.Voo.IdVoo</td>
+                        <td>@ve.Voo.Origem?.CodigoIATA</td>
+                        <td>@ve.Voo.Destino?.CodigoIATA</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-info">Nenhum voo vinculado a esta escala.</div>
+    }
 
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.IdEscala" class="btn btn-primary">Editar</a>
 <a asp-action="Index" class="btn btn-secondary">Voltar</a>

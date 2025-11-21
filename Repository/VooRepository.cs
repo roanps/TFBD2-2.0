@@ -29,6 +29,17 @@ public class VooRepository : IVooRepository
             .Include(v => v.Destino)
             .FirstOrDefaultAsync(v => v.IdVoo == id);
     }
+    public async Task<Voo?> GetByIdWithEscalas(int id)
+    {
+        return await _context.Voos
+            .Include(v => v.Aeronave)
+            .Include(v => v.Origem)
+            .Include(v => v.Destino)
+            .Include(v => v.VoosEscalas)
+                .ThenInclude(ve => ve.Escala)
+                    .ThenInclude(e => e.AeroportoEscala)
+            .FirstOrDefaultAsync(v => v.IdVoo == id);
+    }
 
     public async Task Create(Voo item)
     {

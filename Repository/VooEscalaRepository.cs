@@ -41,4 +41,15 @@ public class VooEscalaRepository : IVooEscalaRepository
         _context.VooEscalas.Remove(item);
         await _context.SaveChangesAsync();
     }
+
+    public async Task DeleteByVoo(int idVoo)
+    {
+        var registros = await _context.VooEscalas
+            .Where(ve => ve.IdVoo == idVoo)
+            .ToListAsync();
+
+        _context.VooEscalas.RemoveRange(registros);
+        await _context.SaveChangesAsync();
+    }
+
 }

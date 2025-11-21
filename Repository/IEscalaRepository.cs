@@ -8,4 +8,6 @@ public interface IEscalaRepository
     Task Create(Escala item);
     Task Update(Escala item);
     Task Delete(Escala item);
+    Task Delete(int id);
+
 }

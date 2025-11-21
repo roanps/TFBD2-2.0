@@ -40,7 +40,22 @@ public class EscalaRepository : IEscalaRepository
 
     public async Task Delete(Escala item)
     {
-        _context.Escalas.Remove(item);
-        await _context.SaveChangesAsync();
+        await Delete(item.IdEscala);
+    }
+
+    public async Task Delete(int id)
+    {
+        var escala = await _context.Escalas
+            .Include(e => e.VoosEscalas)
+            .FirstOrDefaultAsync(e => e.IdEscala == id);
+
+        if (escala != null)
+        {
+            _context.VooEscalas.RemoveRange(escala.VoosEscalas);
+
+            _context.Escalas.Remove(escala);
+
+            await _context.SaveChangesAsync();
+        }
     }
 }

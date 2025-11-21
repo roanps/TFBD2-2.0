@@ -1,27 +1,44 @@
 @model VoeMais.Models.Escala
+
 @{
     ViewData["Title"] = "Criar Escala";
 }
-<h2>@ViewData["Title"]</h2>
+
+<h2>Criar Escala</h2>
 
 <form asp-action="Create" method="post">
-    <div class="mb-3">
-        <label asp-for="IdEscala" class="form-label">ID</label>
-        <input asp-for="IdEscala" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label asp-for="IdAeroportoEscala" class="form-label">Aeroporto Escala</label>
-        <input asp-for="IdAeroportoEscala" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label asp-for="ChegadaEscala" class="form-label">Chegada</label>
-        <input asp-for="ChegadaEscala" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label asp-for="SaidaEscala" class="form-label">Saída</label>
-        <input asp-for="SaidaEscala" class="form-control" />
+
+    <div class="form-group mb-3">
+        <label class="form-label">Voo</label>
+        <select class="form-control" name="idVoo" asp-items="ViewBag.Voos">
+            <option value="">Selecione um voo</option>
+        </select>
     </div>
 
-    <button type="submit" class="btn btn-primary">Salvar</button>
+    <div class="form-group mb-3">
+        <label class="form-label">Aeroporto da Escala</label>
+        <select asp-for="IdAeroportoEscala" class="form-control" asp-items="ViewBag.Aeroportos">
+            <option value="">Selecione o aeroporto</option>
+        </select>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Chegada</label>
+        <input asp-for="ChegadaEscala" type="datetime-local" class="form-control" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Saída</label>
+        <input asp-for="SaidaEscala" type="datetime-local" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Salvar</button>
     <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
 </form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
