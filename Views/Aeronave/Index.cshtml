@@ -1,0 +1,45 @@
+@model IEnumerable<VoeMais.Models.Aeronave>
+@{
+    ViewData["Title"] = "Aeronave - Lista";
+}
+<h2>@ViewData["Title"]</h2>
+
+<p><a asp-action="Create" class="btn btn-primary">Novo</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>IdAeronave</th>
+            <th>IdAeronave</th>
+            <th>IdEmpresa</th>
+            <th>ModeloAeronave</th>
+            <th>DataFabricacao</th>
+            <th>NumeroPoltronas</th>
+            <th>NumeroMaximoTripulantes</th>
+            <th>CapacidadeMaximaCombustivel</th>
+            <th>CapacidadeMaximaVoo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@item.IdAeronave</td>
+            <td>@item.IdAeronave</td>
+            <td>@item.IdEmpresa</td>
+            <td>@item.ModeloAeronave</td>
+            <td>@item.DataFabricacao</td>
+            <td>@item.NumeroPoltronas</td>
+            <td>@item.NumeroMaximoTripulantes</td>
+            <td>@item.CapacidadeMaximaCombustivel</td>
+            <td>@item.CapacidadeMaximaVoo</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.IdAeronave" class="btn btn-sm btn-info">Detalhes</a>
+                <a asp-action="Edit" asp-route-id="@item.IdAeronave" class="btn btn-sm btn-warning">Editar</a>
+                <a asp-action="Delete" asp-route-id="@item.IdAeronave" class="btn btn-sm btn-danger">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

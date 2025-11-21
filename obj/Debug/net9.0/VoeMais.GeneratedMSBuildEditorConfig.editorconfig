@@ -1,0 +1,177 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = VoeMais
+build_property.RootNamespace = VoeMais
+build_property.ProjectDir = C:\Users\Roan\Downloads\VoeMais_corrigido\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Roan\Downloads\VoeMais_corrigido
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Aeronave/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb25hdmVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Aeronave/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb25hdmVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Aeronave/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb25hdmVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Aeronave/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb25hdmVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Aeronave/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb25hdmVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Aeroporto/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb3BvcnRvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Aeroporto/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb3BvcnRvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Aeroporto/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb3BvcnRvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Aeroporto/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb3BvcnRvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Aeroporto/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWVyb3BvcnRvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/EmpresaAerea/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYUFlcmVhXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/EmpresaAerea/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYUFlcmVhXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/EmpresaAerea/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYUFlcmVhXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/EmpresaAerea/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYUFlcmVhXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/EmpresaAerea/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYUFlcmVhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Escala/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYWxhXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Escala/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYWxhXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Escala/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYWxhXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Escala/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYWxhXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Escala/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNjYWxhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Passageiro/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc2FnZWlyb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Passageiro/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc2FnZWlyb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Passageiro/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc2FnZWlyb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Passageiro/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc2FnZWlyb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Passageiro/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc2FnZWlyb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Passagem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc2FnZW1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Poltrona/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sdHJvbmFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/VooEscala/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9vRXNjYWxhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Voo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9vXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Voo/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9vXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Voo/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9vXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Voo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9vXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/Voo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVm9vXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Roan/Downloads/VoeMais_corrigido/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,37 @@
+@model IEnumerable<VoeMais.Models.Escala>
+@{
+    ViewData["Title"] = "Escala - Lista";
+}
+<h2>@ViewData["Title"]</h2>
+
+<p><a asp-action="Create" class="btn btn-primary">Novo</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>IdEscala</th>
+            <th>IdEscala</th>
+            <th>IdAeroportoEscala</th>
+            <th>ChegadaEscala</th>
+            <th>SaidaEscala</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@item.IdEscala</td>
+            <td>@item.IdEscala</td>
+            <td>@item.IdAeroportoEscala</td>
+            <td>@item.ChegadaEscala</td>
+            <td>@item.SaidaEscala</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.IdEscala" class="btn btn-sm btn-info">Detalhes</a>
+                <a asp-action="Edit" asp-route-id="@item.IdEscala" class="btn btn-sm btn-warning">Editar</a>
+                <a asp-action="Delete" asp-route-id="@item.IdEscala" class="btn btn-sm btn-danger">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

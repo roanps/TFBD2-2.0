@@ -1,0 +1,35 @@
+@model VoeMais.Models.Aeronave
+@{
+    ViewData["Title"] = "Detalhes Aeronave";
+}
+<h2>@ViewData["Title"]</h2>
+
+<dl class="row">
+    <dt class="col-sm-2">ID</dt>
+    <dd class="col-sm-10">@Model.IdAeronave</dd>
+
+    <dt class="col-sm-2">ID Empresa</dt>
+    <dd class="col-sm-10">@Model.IdEmpresa</dd>
+
+    <dt class="col-sm-2">Modelo</dt>
+    <dd class="col-sm-10">@Model.ModeloAeronave</dd>
+
+    <dt class="col-sm-2">Data Fabricação</dt>
+    <dd class="col-sm-10">@Model.DataFabricacao</dd>
+
+    <dt class="col-sm-2">Nº Poltronas</dt>
+    <dd class="col-sm-10">@Model.NumeroPoltronas</dd>
+
+    <dt class="col-sm-2">Máx. Tripulantes</dt>
+    <dd class="col-sm-10">@Model.NumeroMaximoTripulantes</dd>
+
+    <dt class="col-sm-2">Cap. Combustível</dt>
+    <dd class="col-sm-10">@Model.CapacidadeMaximaCombustivel</dd>
+
+    <dt class="col-sm-2">Cap. Voo</dt>
+    <dd class="col-sm-10">@Model.CapacidadeMaximaVoo</dd>
+
+
+</dl>
+
+<a asp-action="Index" class="btn btn-secondary">Voltar</a>

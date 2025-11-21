@@ -1,0 +1,27 @@
+@model VoeMais.Models.Escala
+@{
+    ViewData["Title"] = "Editar Escala";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="mb-3">
+        <label asp-for="IdEscala" class="form-label">ID</label>
+        <input asp-for="IdEscala" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="IdAeroportoEscala" class="form-label">Aeroporto Escala</label>
+        <input asp-for="IdAeroportoEscala" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="ChegadaEscala" class="form-label">Chegada</label>
+        <input asp-for="ChegadaEscala" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="SaidaEscala" class="form-label">Saída</label>
+        <input asp-for="SaidaEscala" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

@@ -1,0 +1,31 @@
+@model VoeMais.Models.Aeroporto
+@{
+    ViewData["Title"] = "Criar Aeroporto";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="IdAeroporto" class="form-label">ID</label>
+        <input asp-for="IdAeroporto" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Nome" class="form-label">Nome</label>
+        <input asp-for="Nome" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Cidade" class="form-label">Cidade</label>
+        <input asp-for="Cidade" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Estado" class="form-label">Estado</label>
+        <input asp-for="Estado" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="CodigoIATA" class="form-label">Código IATA</label>
+        <input asp-for="CodigoIATA" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

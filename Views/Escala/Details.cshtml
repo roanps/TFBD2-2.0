@@ -1,0 +1,23 @@
+@model VoeMais.Models.Escala
+@{
+    ViewData["Title"] = "Detalhes Escala";
+}
+<h2>@ViewData["Title"]</h2>
+
+<dl class="row">
+    <dt class="col-sm-2">ID</dt>
+    <dd class="col-sm-10">@Model.IdEscala</dd>
+
+    <dt class="col-sm-2">Aeroporto Escala</dt>
+    <dd class="col-sm-10">@Model.IdAeroportoEscala</dd>
+
+    <dt class="col-sm-2">Chegada</dt>
+    <dd class="col-sm-10">@Model.ChegadaEscala</dd>
+
+    <dt class="col-sm-2">Saída</dt>
+    <dd class="col-sm-10">@Model.SaidaEscala</dd>
+
+
+</dl>
+
+<a asp-action="Index" class="btn btn-secondary">Voltar</a>

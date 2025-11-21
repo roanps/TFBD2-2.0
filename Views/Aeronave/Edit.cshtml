@@ -1,0 +1,43 @@
+@model VoeMais.Models.Aeronave
+@{
+    ViewData["Title"] = "Editar Aeronave";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="mb-3">
+        <label asp-for="IdAeronave" class="form-label">ID</label>
+        <input asp-for="IdAeronave" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="IdEmpresa" class="form-label">ID Empresa</label>
+        <input asp-for="IdEmpresa" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="ModeloAeronave" class="form-label">Modelo</label>
+        <input asp-for="ModeloAeronave" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="DataFabricacao" class="form-label">Data Fabricação</label>
+        <input asp-for="DataFabricacao" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="NumeroPoltronas" class="form-label">Nº Poltronas</label>
+        <input asp-for="NumeroPoltronas" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="NumeroMaximoTripulantes" class="form-label">Máx. Tripulantes</label>
+        <input asp-for="NumeroMaximoTripulantes" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="CapacidadeMaximaCombustivel" class="form-label">Cap. Combustível</label>
+        <input asp-for="CapacidadeMaximaCombustivel" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="CapacidadeMaximaVoo" class="form-label">Cap. Voo</label>
+        <input asp-for="CapacidadeMaximaVoo" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

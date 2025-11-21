@@ -1,0 +1,35 @@
+@model VoeMais.Models.Voo
+@{
+    ViewData["Title"] = "Criar Voo";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="IdVoo" class="form-label">ID</label>
+        <input asp-for="IdVoo" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="IdAeronave" class="form-label">ID Aeronave</label>
+        <input asp-for="IdAeronave" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="IdAeroportoOrigem" class="form-label">Aeroporto Origem</label>
+        <input asp-for="IdAeroportoOrigem" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Partida" class="form-label">Partida</label>
+        <input asp-for="Partida" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="IdAeroportoDestino" class="form-label">Aeroporto Destino</label>
+        <input asp-for="IdAeroportoDestino" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Chegada" class="form-label">Chegada</label>
+        <input asp-for="Chegada" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
