@@ -9,11 +9,11 @@ public class Voo
     public int IdAeroportoDestino { get; set; }
     public DateTime Chegada { get; set; }
 
-    public Aeronave Aeronave { get; set; }
-    public Aeroporto Origem { get; set; }
-    public Aeroporto Destino { get; set; }
+    public Aeronave? Aeronave { get; set; }
+    public Aeroporto? Origem { get; set; }
+    public Aeroporto? Destino { get; set; }
 
-    public ICollection<VooEscala> VoosEscalas { get; set; }
+    public ICollection<VooEscala>? VoosEscalas { get; set; }
     public ICollection<Poltrona> Poltronas { get; set; } = new List<Poltrona>();
     public ICollection<Passagem> Passagens { get; set; } = new List<Passagem>();
 }

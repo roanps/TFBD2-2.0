@@ -1,35 +1,54 @@
 @model VoeMais.Models.Voo
+
 @{
     ViewData["Title"] = "Criar Voo";
 }
-<h2>@ViewData["Title"]</h2>
 
-<form asp-action="Create" method="post">
-    <div class="mb-3">
-        <label asp-for="IdVoo" class="form-label">ID</label>
-        <input asp-for="IdVoo" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label asp-for="IdAeronave" class="form-label">ID Aeronave</label>
-        <input asp-for="IdAeronave" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label asp-for="IdAeroportoOrigem" class="form-label">Aeroporto Origem</label>
-        <input asp-for="IdAeroportoOrigem" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label asp-for="Partida" class="form-label">Partida</label>
-        <input asp-for="Partida" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label asp-for="IdAeroportoDestino" class="form-label">Aeroporto Destino</label>
-        <input asp-for="IdAeroportoDestino" class="form-control" />
-    </div>
-    <div class="mb-3">
-        <label asp-for="Chegada" class="form-label">Chegada</label>
-        <input asp-for="Chegada" class="form-control" />
+<h2>Criar Voo</h2>
+<hr />
+
+<form asp-action="Create">
+
+    <div class="form-group mb-3">
+        <label class="form-label">Aeronave</label>
+        <select asp-for="IdAeronave" class="form-control"
+                asp-items="@(new SelectList(ViewBag.Aeronaves, "IdAeronave", "ModeloAeronave"))">
+            <option value="">Selecione...</option>
+        </select>
+        <span asp-validation-for="IdAeronave" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Salvar</button>
+    <div class="form-group mb-3">
+        <label class="form-label">Aeroporto de Origem</label>
+        <select asp-for="IdAeroportoOrigem" class="form-control"
+                asp-items="@(new SelectList(ViewBag.Aeroportos, "IdAeroporto", "CodigoIATA"))">
+            <option value="">Selecione...</option>
+        </select>
+        <span asp-validation-for="IdAeroportoOrigem" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Aeroporto de Destino</label>
+        <select asp-for="IdAeroportoDestino" class="form-control"
+                asp-items="@(new SelectList(ViewBag.Aeroportos, "IdAeroporto", "CodigoIATA"))">
+            <option value="">Selecione...</option>
+        </select>
+        <span asp-validation-for="IdAeroportoDestino" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Partida</label>
+        <input asp-for="Partida" type="datetime-local" class="form-control" />
+        <span asp-validation-for="Partida" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Chegada</label>
+        <input asp-for="Chegada" type="datetime-local" class="form-control" />
+        <span asp-validation-for="Chegada" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Salvar</button>
     <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
 </form>

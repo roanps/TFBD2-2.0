@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\VoeMais.csproj": {}
+    "C:\\Users\\371153\\Downloads\\TFBD2-2.0\\VoeMais.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\VoeMais.csproj": {
+    "C:\\Users\\371153\\Downloads\\TFBD2-2.0\\VoeMais.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\VoeMais.csproj",
+        "projectUniqueName": "C:\\Users\\371153\\Downloads\\TFBD2-2.0\\VoeMais.csproj",
         "projectName": "VoeMais",
-        "projectPath": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\VoeMais.csproj",
-        "packagesPath": "C:\\Users\\Roan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Roan\\Downloads\\VoeMais_corrigido\\obj\\",
+        "projectPath": "C:\\Users\\371153\\Downloads\\TFBD2-2.0\\VoeMais.csproj",
+        "packagesPath": "C:\\Users\\371153\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\371153\\Downloads\\TFBD2-2.0\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Roan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\371153\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -87,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
