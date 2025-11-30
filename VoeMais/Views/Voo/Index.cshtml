@@ -1,0 +1,65 @@
+﻿@model IEnumerable<VoeMais.Models.Voo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aviao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Origem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Partida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chegada)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aviao.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Origem.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destino.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Partida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chegada)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

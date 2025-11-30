@@ -1,0 +1,49 @@
+﻿@model VoeMais.Models.Escala
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Escala</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="VooId" class="control-label"></label>
+                <select asp-for="VooId" class="form-control" asp-items="ViewBag.VooId"></select>
+                <span asp-validation-for="VooId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AeroportoId" class="control-label"></label>
+                <select asp-for="AeroportoId" class="form-control" asp-items="ViewBag.AeroportoId"></select>
+                <span asp-validation-for="AeroportoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chegada" class="control-label"></label>
+                <input asp-for="Chegada" class="form-control" />
+                <span asp-validation-for="Chegada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Partida" class="control-label"></label>
+                <input asp-for="Partida" class="form-control" />
+                <span asp-validation-for="Partida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
