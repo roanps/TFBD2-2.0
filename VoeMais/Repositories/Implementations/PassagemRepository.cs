@@ -14,20 +14,30 @@ namespace VoeMais.Repositories.Implementations
             _context = context;
         }
 
-        public async Task<Passagem> GetByIdAsync(int id)
+        public async Task<IEnumerable<Passagem>> GetAllAsync()
         {
             return await _context.Passagens
                 .Include(p => p.Cliente)
                 .Include(p => p.VooPoltrona)
-                .ThenInclude(vp => vp.Poltrona)
+                    .ThenInclude(vp => vp.Voo)
+                .ToListAsync();
+        }
+
+        public async Task<Passagem?> GetByIdAsync(int id)
+        {
+            return await _context.Passagens
+                .Include(p => p.Cliente)
+                .Include(p => p.VooPoltrona)
+                    .ThenInclude(vp => vp.Voo)
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
 
         public async Task<IEnumerable<Passagem>> GetByClienteAsync(int clienteId)
         {
             return await _context.Passagens
-                .Where(p => p.ClienteId == clienteId)
                 .Include(p => p.VooPoltrona)
+                    .ThenInclude(vp => vp.Voo)
+                .Where(p => p.ClienteId == clienteId)
                 .ToListAsync();
         }
 
@@ -35,6 +45,22 @@ namespace VoeMais.Repositories.Implementations
         {
             _context.Passagens.Add(passagem);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(Passagem passagem)
+        {
+            _context.Passagens.Update(passagem);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var passagem = await _context.Passagens.FindAsync(id);
+            if (passagem != null)
+            {
+                _context.Passagens.Remove(passagem);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

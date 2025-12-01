@@ -1,170 +1,151 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using VoeMais.Data;
 using VoeMais.Models;
+using VoeMais.Repositories.Interfaces;
 
 namespace VoeMais.Controllers
 {
     public class PassagemController : Controller
     {
-        private readonly VoeMaisContext _context;
+        private readonly IPassagemRepository _passagemRepository;
+        private readonly IClienteRepository _clienteRepository;
+        private readonly IVooPoltronaRepository _vooPoltronaRepository;
+        private readonly IVooRepository _vooRepository;
 
-        public PassagemController(VoeMaisContext context)
+        public PassagemController(
+            IPassagemRepository passagemRepository,
+            IClienteRepository clienteRepository,
+            IVooPoltronaRepository vooPoltronaRepository,
+            IVooRepository vooRepository)
         {
-            _context = context;
+            _passagemRepository = passagemRepository;
+            _clienteRepository = clienteRepository;
+            _vooPoltronaRepository = vooPoltronaRepository;
+            _vooRepository = vooRepository;
         }
 
-        // GET: Passagem
         public async Task<IActionResult> Index()
         {
-            var voeMaisContext = _context.Passagens.Include(p => p.Cliente).Include(p => p.VooPoltrona);
-            return View(await voeMaisContext.ToListAsync());
+            var passagens = await _passagemRepository.GetAllAsync();
+            return View(passagens);
         }
 
-        // GET: Passagem/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var passagem = await _context.Passagens
-                .Include(p => p.Cliente)
-                .Include(p => p.VooPoltrona)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var passagem = await _passagemRepository.GetByIdAsync(id);
             if (passagem == null)
-            {
                 return NotFound();
-            }
 
             return View(passagem);
         }
 
-        // GET: Passagem/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Id");
-            ViewData["VooPoltronaId"] = new SelectList(_context.VoosPoltronas, "Id", "Id");
+            await CarregarDropdowns();
             return View();
         }
 
-        // POST: Passagem/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ClienteId,VooPoltronaId,DataCompra")] Passagem passagem)
+        public async Task<IActionResult> Create(Passagem passagem)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Add(passagem);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                await CarregarDropdowns();
+                return View(passagem);
             }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Id", passagem.ClienteId);
-            ViewData["VooPoltronaId"] = new SelectList(_context.VoosPoltronas, "Id", "Id", passagem.VooPoltronaId);
-            return View(passagem);
+
+            passagem.DataCompra = DateTime.Now;
+
+            await _passagemRepository.AddAsync(passagem);
+
+            // marca poltrona como ocupada
+            var voopol = await _vooPoltronaRepository.GetByIdAsync(passagem.VooPoltronaId);
+            if (voopol != null)
+            {
+                voopol.Status = PoltronaStatus.Ocupada;
+                await _vooPoltronaRepository.UpdateAsync(voopol);
+            }
+
+            return RedirectToAction(nameof(Index));
         }
 
-        // GET: Passagem/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var passagem = await _context.Passagens.FindAsync(id);
+            var passagem = await _passagemRepository.GetByIdAsync(id);
             if (passagem == null)
-            {
                 return NotFound();
-            }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Id", passagem.ClienteId);
-            ViewData["VooPoltronaId"] = new SelectList(_context.VoosPoltronas, "Id", "Id", passagem.VooPoltronaId);
+
+            await CarregarDropdowns();
             return View(passagem);
         }
 
-        // POST: Passagem/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ClienteId,VooPoltronaId,DataCompra")] Passagem passagem)
+        public async Task<IActionResult> Edit(int id, Passagem passagem)
         {
             if (id != passagem.Id)
-            {
                 return NotFound();
+
+            if (!ModelState.IsValid)
+            {
+                await CarregarDropdowns();
+                return View(passagem);
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(passagem);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PassagemExists(passagem.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Id", passagem.ClienteId);
-            ViewData["VooPoltronaId"] = new SelectList(_context.VoosPoltronas, "Id", "Id", passagem.VooPoltronaId);
-            return View(passagem);
+            await _passagemRepository.UpdateAsync(passagem);
+            return RedirectToAction(nameof(Index));
         }
 
-        // GET: Passagem/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var passagem = await _context.Passagens
-                .Include(p => p.Cliente)
-                .Include(p => p.VooPoltrona)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var passagem = await _passagemRepository.GetByIdAsync(id);
             if (passagem == null)
-            {
                 return NotFound();
-            }
 
             return View(passagem);
         }
 
-        // POST: Passagem/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var passagem = await _context.Passagens.FindAsync(id);
+            var passagem = await _passagemRepository.GetByIdAsync(id);
+
+            // libera poltrona de voo
             if (passagem != null)
             {
-                _context.Passagens.Remove(passagem);
+                var voopol = await _vooPoltronaRepository.GetByIdAsync(passagem.VooPoltronaId);
+                if (voopol != null)
+                {
+                    voopol.Status = PoltronaStatus.Livre;
+                    await _vooPoltronaRepository.UpdateAsync(voopol);
+                }
+
+                await _passagemRepository.DeleteAsync(id);
             }
 
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PassagemExists(int id)
+        // Dropdowns de cliente e poltronas de voo
+        private async Task CarregarDropdowns()
         {
-            return _context.Passagens.Any(e => e.Id == id);
+            var clientes = await _clienteRepository.GetAllAsync();
+            var voopol = await _vooPoltronaRepository.GetAllAsync();
+            var voos = await _vooRepository.GetAllAsync();
+
+            ViewBag.ClienteId = new SelectList(clientes, "Id", "Nome");
+
+            // Exibe poltrona + voo (Ex: A1 - Voo 1234)
+            ViewBag.VooPoltronaId = new SelectList(
+                voopol.Select(v => new {
+                    v.Id,
+                    Display = $"{v.Poltrona.Numero} - {v.Voo.Codigo}"
+                }),
+                "Id",
+                "Display"
+            );
         }
     }
 }

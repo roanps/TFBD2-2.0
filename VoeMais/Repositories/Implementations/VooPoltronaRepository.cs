@@ -14,7 +14,15 @@ namespace VoeMais.Repositories.Implementations
             _context = context;
         }
 
-        public async Task<VooPoltrona> GetByIdAsync(int id)
+        public async Task<IEnumerable<VooPoltrona>> GetAllAsync()
+        {
+            return await _context.VoosPoltronas
+                .Include(vp => vp.Poltrona)
+                .Include(vp => vp.Voo)
+                .ToListAsync();
+        }
+
+        public async Task<VooPoltrona?> GetByIdAsync(int id)
         {
             return await _context.VoosPoltronas
                 .Include(vp => vp.Poltrona)
@@ -27,13 +35,8 @@ namespace VoeMais.Repositories.Implementations
             return await _context.VoosPoltronas
                 .Where(vp => vp.VooId == vooId)
                 .Include(vp => vp.Poltrona)
+                .Include(vp => vp.Voo)
                 .ToListAsync();
-        }
-
-        public async Task UpdateAsync(VooPoltrona vooPoltrona)
-        {
-            _context.VoosPoltronas.Update(vooPoltrona);
-            await _context.SaveChangesAsync();
         }
 
         public async Task AddAsync(VooPoltrona vooPoltrona)
@@ -42,5 +45,20 @@ namespace VoeMais.Repositories.Implementations
             await _context.SaveChangesAsync();
         }
 
+        public async Task UpdateAsync(VooPoltrona vooPoltrona)
+        {
+            _context.VoosPoltronas.Update(vooPoltrona);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var entity = await _context.VoosPoltronas.FindAsync(id);
+            if (entity != null)
+            {
+                _context.VoosPoltronas.Remove(entity);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

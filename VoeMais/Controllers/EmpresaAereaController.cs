@@ -1,46 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using VoeMais.Data;
 using VoeMais.Models;
+using VoeMais.Repositories.Interfaces;
 
 namespace VoeMais.Controllers
 {
     public class EmpresaAereaController : Controller
     {
-        private readonly VoeMaisContext _context;
+        private readonly IEmpresaAereaRepository _repository;
 
-        public EmpresaAereaController(VoeMaisContext context)
+        public EmpresaAereaController(IEmpresaAereaRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: EmpresaAerea
         public async Task<IActionResult> Index()
         {
-            return View(await _context.EmpresasAereas.ToListAsync());
+            var empresas = await _repository.GetAllAsync();
+            return View(empresas);
         }
 
         // GET: EmpresaAerea/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
+            var empresa = await _repository.GetByIdAsync(id);
+            if (empresa == null)
                 return NotFound();
-            }
 
-            var empresaAerea = await _context.EmpresasAereas
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (empresaAerea == null)
-            {
-                return NotFound();
-            }
-
-            return View(empresaAerea);
+            return View(empresa);
         }
 
         // GET: EmpresaAerea/Create
@@ -50,108 +37,59 @@ namespace VoeMais.Controllers
         }
 
         // POST: EmpresaAerea/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome")] EmpresaAerea empresaAerea)
+        public async Task<IActionResult> Create(EmpresaAerea empresa)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(empresaAerea);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(empresaAerea);
+            if (!ModelState.IsValid)
+                return View(empresa);
+
+            await _repository.AddAsync(empresa);
+            return RedirectToAction(nameof(Index));
         }
 
-        // GET: EmpresaAerea/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: EmpresaAerea/Edit/
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
-            {
+            var empresa = await _repository.GetByIdAsync(id);
+            if (empresa == null)
                 return NotFound();
-            }
 
-            var empresaAerea = await _context.EmpresasAereas.FindAsync(id);
-            if (empresaAerea == null)
-            {
-                return NotFound();
-            }
-            return View(empresaAerea);
+            return View(empresa);
         }
 
-        // POST: EmpresaAerea/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: EmpresaAerea/Edit/
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome")] EmpresaAerea empresaAerea)
+        public async Task<IActionResult> Edit(int id, EmpresaAerea empresa)
         {
-            if (id != empresaAerea.Id)
-            {
+            if (id != empresa.Id)
                 return NotFound();
-            }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(empresaAerea);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!EmpresaAereaExists(empresaAerea.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(empresaAerea);
+            if (!ModelState.IsValid)
+                return View(empresa);
+
+            await _repository.UpdateAsync(empresa);
+            return RedirectToAction(nameof(Index));
         }
 
-        // GET: EmpresaAerea/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        // GET: EmpresaAerea/Delete/
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
+            var empresa = await _repository.GetByIdAsync(id);
+            if (empresa == null)
                 return NotFound();
-            }
 
-            var empresaAerea = await _context.EmpresasAereas
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (empresaAerea == null)
-            {
-                return NotFound();
-            }
-
-            return View(empresaAerea);
+            return View(empresa);
         }
 
-        // POST: EmpresaAerea/Delete/5
+        // POST: EmpresaAerea/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var empresaAerea = await _context.EmpresasAereas.FindAsync(id);
-            if (empresaAerea != null)
-            {
-                _context.EmpresasAereas.Remove(empresaAerea);
-            }
-
-            await _context.SaveChangesAsync();
+            await _repository.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool EmpresaAereaExists(int id)
-        {
-            return _context.EmpresasAereas.Any(e => e.Id == id);
         }
     }
 }

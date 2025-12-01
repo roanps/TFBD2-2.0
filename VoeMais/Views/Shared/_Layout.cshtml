@@ -1,91 +1,47 @@
-@using Microsoft.AspNetCore.Mvc.Rendering
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewData["Title"] - VoeMais</title>
 
-    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <style>
-        body {
-            display: flex;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f8f9fa;
-        }
-
-        .sidebar {
-            width: 250px;
-            background-color: #0d6efd;
-            color: white;
-            padding-top: 20px;
-            flex-shrink: 0;
-            height: 100vh;
-            position: fixed;
-        }
-
-            .sidebar h4 {
-                text-align: center;
-                margin-bottom: 20px;
-                font-weight: bold;
-            }
-
-            .sidebar a {
-                color: white;
-                text-decoration: none;
-                display: block;
-                padding: 12px 20px;
-            }
-
-                .sidebar a:hover {
-                    background-color: rgba(255, 255, 255, 0.2);
-                }
-
-        .content-area {
-            margin-left: 250px;
-            padding: 25px;
-            width: 100%;
-        }
-
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            color: #777;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
+
 <body>
 
     <div class="sidebar">
-        <h4>✈ VoeMais</h4>
+        <h4>VoeMais</h4>
+        <a asp-controller="Home" asp-action="Index"><i class="bi bi-house-door"></i> Início</a>
+        <a asp-controller="EmpresaAerea" asp-action="Index"><i class="bi bi-building"></i> Empresas Aéreas</a>
+        <a asp-controller="Aeroporto" asp-action="Index"><i class="bi bi-geo-alt"></i> Aeroportos</a>
+        <a asp-controller="Aviao" asp-action="Index"><i class="bi bi-airplane"></i> Aviões</a>
+        <a asp-controller="Poltrona" asp-action="Index"><i class="bi bi-grid"></i> Poltronas</a>
+        <a asp-controller="Voo" asp-action="Index"><i class="bi bi-send"></i> Voos</a>
+        <a asp-controller="Escala" asp-action="Index"><i class="bi bi-stopwatch"></i> Escalas</a>
+        <a asp-controller="Cliente" asp-action="Index"><i class="bi bi-people"></i> Clientes</a>
+        <a asp-controller="Passagem" asp-action="Index"><i class="bi bi-ticket"></i> Passagens</a>
+    </div>
 
-        <a href="/Home/Menu"> Início</a>
-        <a href="/Aeroporto"> Aeroportos</a>
-        <a href="/EmpresaAerea"> Empresas Aéreas</a>
-        <a href="/Aviao">✈ Aviões</a>
-        <a href="/Poltrona"> Poltronas</a>
-        <a href="/Voo"> Voos</a>
-        <a href="/Escala"> Escalas</a>
-        <a href="/Cliente"> Clientes</a>
-        <a href="/Passagem"> Passagens</a>
+    <div class="topbar">
+        <h5 class="m-0">@ViewData["Title"]</h5>
     </div>
 
     <div class="content-area">
-
-        <main role="main" class="pb-3">
+        <div class="container">
             @RenderBody()
-        </main>
-
-        <footer>
-            <p>VoeMais • Sistema Gerenciador de Aeroportos - @DateTime.Now.Year</p>
-        </footer>
-
+        </div>
     </div>
 
+    <footer>
+        VoeMais - Sistema Gerenciador de Aeroportos - @DateTime.Now.Year
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@4.0.0/dist/jquery.validate.unobtrusive.min.js"></script>
 
     @RenderSection("Scripts", required: false)
 </body>

@@ -1,164 +1,115 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using VoeMais.Data;
 using VoeMais.Models;
+using VoeMais.Repositories.Interfaces;
 
 namespace VoeMais.Controllers
 {
     public class PoltronaController : Controller
     {
-        private readonly VoeMaisContext _context;
+        private readonly IPoltronaRepository _poltronaRepository;
+        private readonly IAviaoRepository _aviaoRepository;
 
-        public PoltronaController(VoeMaisContext context)
+        public PoltronaController(
+            IPoltronaRepository poltronaRepository,
+            IAviaoRepository aviaoRepository)
         {
-            _context = context;
+            _poltronaRepository = poltronaRepository;
+            _aviaoRepository = aviaoRepository;
         }
 
         // GET: Poltrona
         public async Task<IActionResult> Index()
         {
-            var voeMaisContext = _context.Poltronas.Include(p => p.Aviao);
-            return View(await voeMaisContext.ToListAsync());
+            var poltronas = await _poltronaRepository.GetAllAsync();
+            return View(poltronas);
         }
 
         // GET: Poltrona/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var poltrona = await _context.Poltronas
-                .Include(p => p.Aviao)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var poltrona = await _poltronaRepository.GetByIdAsync(id);
             if (poltrona == null)
-            {
                 return NotFound();
-            }
 
             return View(poltrona);
         }
 
         // GET: Poltrona/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewData["AviaoId"] = new SelectList(_context.Avioes, "Id", "Id");
+            await CarregarAvioes();
             return View();
         }
 
         // POST: Poltrona/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Numero,AviaoId")] Poltrona poltrona)
+        public async Task<IActionResult> Create(Poltrona poltrona)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _context.Add(poltrona);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                await CarregarAvioes();
+                return View(poltrona);
             }
-            ViewData["AviaoId"] = new SelectList(_context.Avioes, "Id", "Id", poltrona.AviaoId);
-            return View(poltrona);
+
+            await _poltronaRepository.AddAsync(poltrona);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Poltrona/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var poltrona = await _context.Poltronas.FindAsync(id);
+            var poltrona = await _poltronaRepository.GetByIdAsync(id);
             if (poltrona == null)
-            {
                 return NotFound();
-            }
-            ViewData["AviaoId"] = new SelectList(_context.Avioes, "Id", "Id", poltrona.AviaoId);
+
+            await CarregarAvioes();
             return View(poltrona);
         }
 
         // POST: Poltrona/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Numero,AviaoId")] Poltrona poltrona)
+        public async Task<IActionResult> Edit(int id, Poltrona poltrona)
         {
             if (id != poltrona.Id)
-            {
                 return NotFound();
+
+            if (!ModelState.IsValid)
+            {
+                await CarregarAvioes();
+                return View(poltrona);
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(poltrona);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PoltronaExists(poltrona.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["AviaoId"] = new SelectList(_context.Avioes, "Id", "Id", poltrona.AviaoId);
-            return View(poltrona);
+            await _poltronaRepository.UpdateAsync(poltrona);
+            return RedirectToAction(nameof(Index));
         }
 
-        // GET: Poltrona/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        // GET: Poltrona/Delete
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var poltrona = await _context.Poltronas
-                .Include(p => p.Aviao)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var poltrona = await _poltronaRepository.GetByIdAsync(id);
             if (poltrona == null)
-            {
                 return NotFound();
-            }
 
             return View(poltrona);
         }
 
-        // POST: Poltrona/Delete/5
+        // POST: Poltrona/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var poltrona = await _context.Poltronas.FindAsync(id);
-            if (poltrona != null)
-            {
-                _context.Poltronas.Remove(poltrona);
-            }
-
-            await _context.SaveChangesAsync();
+            await _poltronaRepository.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PoltronaExists(int id)
+        // MÉTODO AUXILIAR (Dropdown de Aviões)
+        private async Task CarregarAvioes()
         {
-            return _context.Poltronas.Any(e => e.Id == id);
+            var avioes = await _aviaoRepository.GetAllAsync();
+            ViewBag.AviaoId = new SelectList(avioes, "Id", "Modelo");
         }
     }
 }
