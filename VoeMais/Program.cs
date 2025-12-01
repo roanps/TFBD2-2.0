@@ -26,12 +26,6 @@ builder.Services.AddScoped<IVooPoltronaRepository, VooPoltronaRepository>();
 
 var app = builder.Build();
 
-// DESATIVA BROWSER LINK (pq estava quebrando o formulário)
-app.Use(async (context, next) =>
-{
-    context.Request.Headers.Remove("X-VSBrowserLink-Request");
-    await next();
-});
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

@@ -20,7 +20,7 @@ namespace VoeMais.Controllers
             return View(empresas);
         }
 
-        // GET: EmpresaAerea/Details/5
+        // GET: EmpresaAerea/Details/
         public async Task<IActionResult> Details(int id)
         {
             var empresa = await _repository.GetByIdAsync(id);

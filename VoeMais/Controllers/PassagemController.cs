@@ -137,7 +137,7 @@ namespace VoeMais.Controllers
 
             ViewBag.ClienteId = new SelectList(clientes, "Id", "Nome");
 
-            // Exibe poltrona + voo (Ex: A1 - Voo 1234)
+            // Exibe poltrona + voo 
             ViewBag.VooPoltronaId = new SelectList(
                 voopol.Select(v => new {
                     v.Id,

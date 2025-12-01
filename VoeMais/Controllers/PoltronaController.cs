@@ -25,7 +25,7 @@ namespace VoeMais.Controllers
             return View(poltronas);
         }
 
-        // GET: Poltrona/Details/5
+        // GET: Poltrona/Details
         public async Task<IActionResult> Details(int id)
         {
             var poltrona = await _poltronaRepository.GetByIdAsync(id);
@@ -57,7 +57,7 @@ namespace VoeMais.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: Poltrona/Edit/5
+        // GET: Poltrona/Edit
         public async Task<IActionResult> Edit(int id)
         {
             var poltrona = await _poltronaRepository.GetByIdAsync(id);
@@ -68,7 +68,7 @@ namespace VoeMais.Controllers
             return View(poltrona);
         }
 
-        // POST: Poltrona/Edit/5
+        // POST: Poltrona/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Poltrona poltrona)
@@ -105,7 +105,7 @@ namespace VoeMais.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // MÉTODO AUXILIAR (Dropdown de Aviões)
+      
         private async Task CarregarAvioes()
         {
             var avioes = await _aviaoRepository.GetAllAsync();
